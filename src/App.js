@@ -1,5 +1,6 @@
 import Card from "./components/Card"
 import data from "./data"
+import Navbar from "./components/Navbar"
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar />
       {mydata}
     </div>
   );

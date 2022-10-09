@@ -12,6 +12,38 @@ code {
     monospace;
 }
 
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  
+}
+
+.nav-heading {
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-heading > img {
+  height: 40px;
+  width: 40px;
+}
+
+nav > ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding-right: 20px;
+}
+
+nav>ul>li {
+  cursor: pointer;
+}
+
 .pet-img {
   width: 412.5px;
   height:237.5px
