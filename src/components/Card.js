@@ -4,6 +4,7 @@ export default function Card(props) {
             <h1>{props.name}</h1>
             <img src={props.src} alt={props.type} className="pet-img" />
             <div>{props.price}</div>
+            <div>Add To Cart</div>
         </div>
     )
 }

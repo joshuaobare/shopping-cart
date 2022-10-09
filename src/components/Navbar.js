@@ -10,7 +10,9 @@ export default function Navbar() {
             <ul>
                 <li>Home</li>
                 <li>Pets</li>
-                <li>Basket</li>
+                <li>
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                </li>
             </ul>
         </nav>
     )

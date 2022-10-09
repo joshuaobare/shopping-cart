@@ -55,4 +55,21 @@ nav>ul>li {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  gap: 5px;
+}
+
+.homepage > main {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 25%;
+  left: 39%; 
+  gap: 10px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
 }

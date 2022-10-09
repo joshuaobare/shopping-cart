@@ -1,6 +1,7 @@
 import Card from "./components/Card"
 import data from "./data"
 import Navbar from "./components/Navbar"
+import Homepage from "./components/Homepage"
 
 function App() {
 
@@ -25,7 +26,11 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      {mydata}
+      <div className="card-grid">
+        {mydata}
+      </div>
+      
+      {/*<Homepage />*/}
     </div>
   );
 }
