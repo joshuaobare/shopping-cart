@@ -53,11 +53,16 @@ nav>ul>li {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  cursor: pointer;
+  align-items: center;  
   gap: 5px;
 }
 
+.pet-card > img {
+  border: 2px black solid;
+}
+.pet-card > button {
+  cursor: pointer;
+}
 .homepage > main {
   position: absolute;
   display: flex;
@@ -72,4 +77,5 @@ nav>ul>li {
 .card-grid {
   display: grid;
   grid-template-columns: repeat(4,1fr);
+  row-gap: 20px;
 }

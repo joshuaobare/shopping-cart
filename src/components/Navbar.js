@@ -11,7 +11,7 @@ export default function Navbar() {
                 <li>Home</li>
                 <li>Pets</li>
                 <li>
-                    <span class="material-symbols-outlined">shopping_cart</span>
+                    <span className="material-symbols-outlined">shopping_cart</span>
                 </li>
             </ul>
         </nav>
