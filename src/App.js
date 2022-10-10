@@ -3,6 +3,7 @@ import Card from "./components/Card"
 import data from "./data"
 import Navbar from "./components/Navbar"
 import Homepage from "./components/Homepage"
+import CartItem from "./components/CartItem"
 
 function App() {
 
@@ -43,7 +44,17 @@ function App() {
         handleClick = {() => handler(item)}
       />
       )
- }) 
+ })
+ 
+ const cartItems = cart.map(item => {
+   return (
+      <CartItem 
+          name = {item.name}
+          price = {item.price}
+          src = {item.src}
+      />
+   )
+ })
 
  
 
@@ -53,6 +64,9 @@ function App() {
       <Navbar items ={itemCount}/>
       <div className="card-grid">
         {cards}
+      </div>
+      <div>
+        {cartItems}
       </div>
       
       {/*<Homepage />*/}
