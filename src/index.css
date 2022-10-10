@@ -79,3 +79,8 @@ nav>ul>li {
   grid-template-columns: repeat(4,1fr);
   row-gap: 20px;
 }
+
+.item-count {
+  font-size: smaller;
+  
+}

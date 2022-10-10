@@ -12,7 +12,7 @@ export default function Navbar(props) {
                 <li>Pets</li>
                 <li>
                     <span className="material-symbols-outlined">shopping_cart</span>
-                    <span>{props.items}</span>
+                    <span className="item-count">{props.items}</span>
                 </li>
             </ul>
         </nav>
