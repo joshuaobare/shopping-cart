@@ -19,7 +19,7 @@ const data = [
     desc: "",
     id: uniqid(),
     inBasket: false,
-    price: "$3000",
+    price: 3000,
   },
   {
     name: "Doberman",
@@ -28,7 +28,7 @@ const data = [
     desc: "",
     id: uniqid(),
     inBasket: false,
-    price: "$1500",
+    price: 1500,
   },
   {
     name: "German Shepherd",
@@ -37,7 +37,7 @@ const data = [
     desc: "",
     id: uniqid(),
     inBasket: false,
-    price: "$1200",
+    price: 1200,
   },
   {
     name: "Golden Retriever",
@@ -46,7 +46,7 @@ const data = [
     desc: "",
     id: uniqid(),
     inBasket: false,
-    price: "$1005",
+    price: 1005,
   },
   {
     name: "Scottish Fold",
@@ -55,7 +55,7 @@ const data = [
     desc: "",
     id: uniqid(),
     inBasket: false,
-    price: "$2200",
+    price: 2200,
   },
   {
     name: "Shetland Sheepdog",
@@ -64,7 +64,7 @@ const data = [
     desc: "",
     id: uniqid(),
     inBasket: false,
-    price: "$2600",
+    price: 2600,
   },
   {
     name: "Somali Cat",
@@ -73,7 +73,7 @@ const data = [
     desc: "",
     id: uniqid(),
     inBasket: false,
-    price: "$1900",
+    price: 1900,
   },
   {
     name: "Sphynx Cat",
@@ -82,7 +82,7 @@ const data = [
     desc: "",
     id: uniqid(),
     inBasket: false,
-    price: "$1780",
+    price: 1780,
   },
   {
     name: "Birman",
@@ -91,7 +91,7 @@ const data = [
     desc: "",
     id: uniqid(),
     inBasket: false,
-    price: "$1600",
+    price: 1600,
   },
   {
     name: "Tibetan Mastiff",
@@ -100,7 +100,7 @@ const data = [
     desc: "",
     id: uniqid(),
     inBasket: false,
-    price: "$1500",
+    price: 1500,
   },
   {
     name: "Turkish Angora",
@@ -109,7 +109,7 @@ const data = [
     desc: "",
     id: uniqid(),
     inBasket: false,
-    price: "$1330",
+    price: 1330,
   },
 ];
 

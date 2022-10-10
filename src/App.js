@@ -1,4 +1,4 @@
-import React , {useState} from "react"
+import React , {useState , useEffect} from "react"
 import Card from "./components/Card"
 import data from "./data"
 import Navbar from "./components/Navbar"
@@ -7,12 +7,24 @@ import Homepage from "./components/Homepage"
 function App() {
 
   const [cart , setCart] = useState([])
+  const [price , setPrice] = useState(0)
 
-  const handler = (id) => {
-    setCart(prevState => [...prevState,id])
-
+  const handler = (pet) => {
+    setCart(prevState => [...prevState,pet])
+    
   } 
+
+  useEffect(() => {
+    setPrice(() => {
+      return cart.reduce((prevItem, item) => {
+        return prevItem += item.price
+      },0)
+         
+    })
+  },[cart])
+
   console.log(cart)
+  console.log(price)
 
  const cards = data.map(item => {
   return (
@@ -25,7 +37,7 @@ function App() {
         id = {item.id}
         inBasket = {item.inBasket}
         price = {item.price}
-        handleClick = {() => handler(item.id)}
+        handleClick = {() => handler(item)}
       />
       )
  }) 
