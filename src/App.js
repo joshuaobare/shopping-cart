@@ -8,6 +8,7 @@ function App() {
 
   const [cart , setCart] = useState([])
   const [price , setPrice] = useState(0)
+  const [itemCount , setItemCount] = useState(0)
 
   const handler = (pet) => {
     setCart(prevState => [...prevState,pet])
@@ -21,11 +22,13 @@ function App() {
       },0)
          
     })
+    setItemCount(() => {
+      return cart.length
+    })
+
   },[cart])
 
-  console.log(cart)
-  console.log(price)
-
+  
  const cards = data.map(item => {
   return (
       <Card
@@ -47,7 +50,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
+      <Navbar items ={itemCount}/>
       <div className="card-grid">
         {cards}
       </div>

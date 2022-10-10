@@ -1,6 +1,6 @@
 import Paw from "../pets/PawPrint.png"
 
-export default function Navbar() {
+export default function Navbar(props) {
     return (
         <nav>
             <div className="nav-heading">
@@ -12,6 +12,7 @@ export default function Navbar() {
                 <li>Pets</li>
                 <li>
                     <span className="material-symbols-outlined">shopping_cart</span>
+                    <span>{props.items}</span>
                 </li>
             </ul>
         </nav>
