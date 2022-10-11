@@ -12,28 +12,25 @@ function App() {
   const [itemCount , setItemCount] = useState(0)
 
   const handler = (pet) => {
+    
     setCart(prevState => {
       
-      let x = {...pet, number: pet.number + 1}
-      let newarr = [...prevState, x]
+      let newarr = [...prevState] 
+      const check = newarr.some(item => item.id === pet.id)
       
-      let output = []
+      if (check) {
+        const index = newarr.findIndex(item => item.id === pet.id)
+        newarr[index].number += 1
+                
+      }
+      else {
+        const newpet = pet
+        newpet.number += 1        
+        newarr.push(newpet)
+      }
       
-      newarr.forEach(item => {
-        const existing = output.filter(v => {
-          return v.id === item.id;
-        });
-        if (existing.length) {
-          const existingIndex = output.indexOf(existing[0]);
           
-          output[existingIndex].number += 1;
-          console.log(output[existingIndex].number)
-        } else {
-          output.push(item);
-        }
-        });
-    
-      return output
+      return [...newarr]
     })
     
   } 
@@ -42,16 +39,20 @@ function App() {
 
   useEffect(() => {
     setPrice(() => {
-      return cart.reduce((prevItem, item) => {
+      const newCart = [...cart]
+      const num = newCart.reduce((prevItem, item) => {
         return prevItem += item.price
       },0)
-         
+      return num   
     })
     setItemCount(() => {
-      return cart.reduce((prevItem,item) => {
+      const newCart = [...cart]
+      const num = newCart.reduce((prevItem,item) => {
         return prevItem += item.number
       },0
-    )})
+    )
+      return num
+  })
 
   },[cart])
 
