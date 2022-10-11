@@ -12,9 +12,33 @@ function App() {
   const [itemCount , setItemCount] = useState(0)
 
   const handler = (pet) => {
-    setCart(prevState => [...prevState,pet])
+    setCart(prevState => {
+      
+      let x = {...pet, number: pet.number + 1}
+      let newarr = [...prevState, x]
+      
+      let output = []
+      
+      newarr.forEach(item => {
+        const existing = output.filter(v => {
+          return v.id === item.id;
+        });
+        if (existing.length) {
+          const existingIndex = output.indexOf(existing[0]);
+          
+          output[existingIndex].number += 1;
+          console.log(output[existingIndex].number)
+        } else {
+          output.push(item);
+        }
+        });
+    
+      return output
+    })
     
   } 
+
+  console.log(cart)
 
   useEffect(() => {
     setPrice(() => {
@@ -24,8 +48,10 @@ function App() {
          
     })
     setItemCount(() => {
-      return cart.length
-    })
+      return cart.reduce((prevItem,item) => {
+        return prevItem += item.number
+      },0
+    )})
 
   },[cart])
 
