@@ -84,9 +84,17 @@ nav>ul>li {
   font-size: smaller;
   
 }
+.cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
 
 .cart-item {
   display: flex;
+  justify-self: center;
 }
 
 .item-count {
@@ -100,4 +108,20 @@ nav>ul>li {
   outline: none;
   border: none;
   cursor: pointer;
+}
+
+.cart-img {
+  width: 275px;
+  height: 158.3333333333333px;
+}
+.cart-item-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.cart-total-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
 }

@@ -71,7 +71,7 @@ function App() {
     setPrice(() => {
       const newCart = [...cart]
       const num = newCart.reduce((prevItem, item) => {
-        return prevItem += item.price
+        return prevItem += (item.price * item.number)
       },0)
       return num   
     })
@@ -111,10 +111,14 @@ function App() {
   return (
     <div className="App">
       <Navbar items ={itemCount}/>
-      <Cart data = {cart} addCartCount= {addCartCount} reduceCartCount = {reduceCartCount}/>
-      <div className="card-grid">
+      <Cart data = {cart} 
+            addCartCount= {addCartCount} 
+            reduceCartCount = {reduceCartCount}
+            price = {price}
+      />
+      {/*<div className="card-grid">
         {cards}
-      </div>
+  </div>*/}
       
       
       {/*<Homepage />*/}
