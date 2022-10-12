@@ -8,7 +8,7 @@ export default function CartItem(props) {
                 <div className="item-count">
                     <button>-</button>
                     <div>{props.number}</div>
-                    <button>+</button>
+                    <button onClick={props.addCartCount}>+</button>
                 </div>
             </div>
         </div>

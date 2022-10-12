@@ -11,8 +11,7 @@ function App() {
   const [price , setPrice] = useState(0)
   const [itemCount , setItemCount] = useState(0)
 
-  const handler = (pet) => {
-    
+  const addToCart = (pet) => {    
     setCart(prevState => {
       
       let newarr = [...prevState] 
@@ -27,15 +26,26 @@ function App() {
         const newpet = pet
         newpet.number += 1        
         newarr.push(newpet)
-      }
-      
-          
+      } 
       return [...newarr]
     })
     
   } 
 
   console.log(cart)
+
+  const addCartCount = (id) => {
+      setCart(prevState => {
+        const newCart = [...prevState].map(item => {
+          if (item.id === id) {
+            return {...item , number: item.number + 1}
+          } else {
+            return item
+          }
+        })
+        return newCart
+      })
+  }
 
   useEffect(() => {
     setPrice(() => {
@@ -68,7 +78,7 @@ function App() {
         id = {item.id}
         inBasket = {item.inBasket}
         price = {item.price}
-        handleClick = {() => handler(item)}
+        handleClick = {() => addToCart(item)}
       />
       )
  })
@@ -80,6 +90,8 @@ function App() {
           price = {item.price}
           src = {item.src}
           number = {item.number}
+          total = {item.price * item.number}
+          addCartCount = {() => addCartCount(item.id)}
       />
    )
  })
