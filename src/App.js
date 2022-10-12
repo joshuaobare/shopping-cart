@@ -4,6 +4,7 @@ import data from "./data"
 import Navbar from "./components/Navbar"
 import Homepage from "./components/Homepage"
 import CartItem from "./components/CartItem"
+import Cart from "./components/Cart"
 
 function App() {
 
@@ -102,19 +103,7 @@ function App() {
       )
  })
  
- const cartItems = cart.map(item => {
-   return (
-      <CartItem 
-          name = {item.name}
-          price = {item.price}
-          src = {item.src}
-          number = {item.number}
-          total = {item.price * item.number}
-          addCartCount = {() => addCartCount(item.id)}
-          reduceCartCount = {() => reduceCartCount(item.id)}
-      />
-   )
- })
+ 
 
  
 
@@ -122,12 +111,11 @@ function App() {
   return (
     <div className="App">
       <Navbar items ={itemCount}/>
+      <Cart data = {cart} addCartCount= {addCartCount} reduceCartCount = {reduceCartCount}/>
       <div className="card-grid">
         {cards}
       </div>
-      <div>
-        {cartItems}
-      </div>
+      
       
       {/*<Homepage />*/}
     </div>
