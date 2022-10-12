@@ -47,6 +47,25 @@ function App() {
       })
   }
 
+  const reduceCartCount = (id) => {
+    setCart(prevState => {
+      const newCart = [...prevState].map(item => {
+        if (item.id === id) {          
+          return {...item , number: item.number - 1}
+                   
+        }else {
+          return item
+        }
+      })
+
+      const index = newCart.findIndex(item => item.number === 0)
+      if (index !== -1){
+        newCart.splice(index,1)
+      }     
+      return newCart
+    })
+  }
+
   useEffect(() => {
     setPrice(() => {
       const newCart = [...cart]
@@ -92,6 +111,7 @@ function App() {
           number = {item.number}
           total = {item.price * item.number}
           addCartCount = {() => addCartCount(item.id)}
+          reduceCartCount = {() => reduceCartCount(item.id)}
       />
    )
  })
