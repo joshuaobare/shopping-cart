@@ -79,6 +79,7 @@ function App() {
           name = {item.name}
           price = {item.price}
           src = {item.src}
+          number = {item.number}
       />
    )
  })

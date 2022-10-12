@@ -7,7 +7,7 @@ export default function CartItem(props) {
                 <div>${props.price}</div>
                 <div className="item-count">
                     <button>-</button>
-                    <div>5</div>
+                    <div>{props.number}</div>
                     <button>+</button>
                 </div>
             </div>
