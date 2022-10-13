@@ -13,8 +13,10 @@ function App() {
 
   const addToCart = (pet) => {    
     setCart(prevState => {
-      
-      let newarr = [...prevState] 
+      console.log(pet)
+      const newarr = [...prevState]
+      console.log(prevState,"prevState")
+      console.log(newarr,"newarr") 
       const check = newarr.some(item => item.id === pet.id)
       
       if (check) {
@@ -23,7 +25,7 @@ function App() {
                 
       }
       else {
-        const newpet = pet
+        const newpet = {...pet}
         newpet.number += 1        
         newarr.push(newpet)
       } 
@@ -61,7 +63,9 @@ function App() {
       const index = newCart.findIndex(item => item.number === 0)
       if (index !== -1){
         newCart.splice(index,1)
-      }     
+      }
+      console.log(index)
+      console.log(newCart)     
       return newCart
     })
   }
@@ -98,12 +102,14 @@ function App() {
                   price = {price}
             />}
           />
-          <Route path = "/pets" element = {<Pets addToCart={addToCart}/>} />
+          <Route path = "/pets" element = {
+            <Pets 
+              addToCart={addToCart}
+              cart = {cart}
+            />
+            } />
         </Routes>
         
-        
-        
-        {/*<Homepage />*/}
       </div>
     </Router>
     

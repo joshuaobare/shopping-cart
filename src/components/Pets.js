@@ -2,7 +2,8 @@ import Card from "./Card"
 import data from "../data"
 
 export default function Pets(props) {
-    const cards = data.map(item => {
+    const info = [...data]
+    const cards = info.map(item => {
         return (
             <Card
               key = {item.id} 
