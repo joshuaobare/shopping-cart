@@ -1,9 +1,6 @@
 import React , {useState , useEffect} from "react"
-import Card from "./components/Card"
-
 import Navbar from "./components/Navbar"
 import Homepage from "./components/Homepage"
-import CartItem from "./components/CartItem"
 import Cart from "./components/Cart"
 import {BrowserRouter as Router , Routes, Route} from "react-router-dom"
 import Pets from "./components/Pets"

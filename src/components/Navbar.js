@@ -6,7 +6,7 @@ export default function Navbar(props) {
         <nav>
             <div className="nav-heading">
                 <img src={Paw} alt="Pet store logo" />
-                <h1 className="">Pet Store</h1> 
+                <h1 >Pet Store</h1> 
             </div>
             <ul>
                 <Link to = "/">
@@ -16,9 +16,9 @@ export default function Navbar(props) {
                     <li>Pets</li>
                 </Link>
                 <Link to = "/cart">
-                    <li>
+                    <li className="li-cart">
                         <span className="material-symbols-outlined">shopping_cart</span>
-                        <span className="item-count">{props.items}</span>
+                        {!props.items ? "" : <span className="nav-item-count">{props.items}</span>}
                     </li>
                 </Link>
                 

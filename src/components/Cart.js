@@ -4,7 +4,8 @@ export default function Cart(props) {
 
     const cartItems = props.data.map(item => {
         return (            
-           <CartItem 
+           <CartItem
+               key = {item.id} 
                name = {item.name}
                price = {item.price}
                src = {item.src}
@@ -12,6 +13,7 @@ export default function Cart(props) {
                total = {item.price * item.number}
                addCartCount = {() => props.addCartCount(item.id)}
                reduceCartCount = {() => props.reduceCartCount(item.id)}
+               type = {item.type}
            />
         )
       })
@@ -19,14 +21,18 @@ export default function Cart(props) {
     return (
         <div className="cart">
             <h1>Shopping Cart</h1>
-            <div className="cart-item-section">
-                {cartItems}
+            <div className="cart-check">
+                {!props.data.length ? "Your Cart Is Empty" : ""}
             </div>
+            <div className="cart-item-section">
+                {cartItems}                
+            </div>
+            <hr />
             <div className="cart-total-section">
-                <div className="total">Total</div>
+                <div className="total">TOTAL PRICE </div>
                 <div className="total-price">${props.price}.00</div>
             </div>
-            <button>Checkout (${props.price}.00)</button>
+            <button>CHECKOUT (${props.price}.00)</button>
             
         </div>
     )

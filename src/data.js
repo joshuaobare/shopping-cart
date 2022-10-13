@@ -14,7 +14,7 @@ import uniqid from "uniqid";
 const data = [
   {
     name: "Siberian Husky",
-    type: "dog",
+    type: "Dog",
     src: SiberianHusky,
     desc: "",
     id: uniqid(),
@@ -24,7 +24,7 @@ const data = [
   },
   {
     name: "Doberman",
-    type: "dog",
+    type: "Dog",
     src: Doberman,
     desc: "",
     id: uniqid(),
@@ -34,7 +34,7 @@ const data = [
   },
   {
     name: "German Shepherd",
-    type: "dog",
+    type: "Dog",
     src: GermanShepherd,
     desc: "",
     id: uniqid(),
@@ -44,7 +44,7 @@ const data = [
   },
   {
     name: "Golden Retriever",
-    type: "dog",
+    type: "Dog",
     src: GoldenRetriever,
     desc: "",
     id: uniqid(),
@@ -54,7 +54,7 @@ const data = [
   },
   {
     name: "Scottish Fold",
-    type: "dog",
+    type: "Dog",
     src: ScottishFold,
     desc: "",
     id: uniqid(),
@@ -64,7 +64,7 @@ const data = [
   },
   {
     name: "Shetland Sheepdog",
-    type: "dog",
+    type: "Dog",
     src: ShetlandSheepdog,
     desc: "",
     id: uniqid(),
@@ -74,7 +74,7 @@ const data = [
   },
   {
     name: "Somali Cat",
-    type: "cat",
+    type: "Cat",
     src: SomaliCat,
     desc: "",
     id: uniqid(),
@@ -84,7 +84,7 @@ const data = [
   },
   {
     name: "Sphynx Cat",
-    type: "cat",
+    type: "Cat",
     src: SphynxCat,
     desc: "",
     id: uniqid(),
@@ -94,7 +94,7 @@ const data = [
   },
   {
     name: "Birman",
-    type: "cat",
+    type: "Cat",
     src: Birman,
     desc: "",
     id: uniqid(),
@@ -104,7 +104,7 @@ const data = [
   },
   {
     name: "Tibetan Mastiff",
-    type: "cat",
+    type: "Dog",
     src: TibetanMastiff,
     desc: "",
     id: uniqid(),
@@ -114,7 +114,7 @@ const data = [
   },
   {
     name: "Turkish Angora",
-    type: "cat",
+    type: "Cat",
     src: TurkishAngora,
     desc: "",
     id: uniqid(),

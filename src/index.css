@@ -16,8 +16,36 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: lightgrey;
   
-  
+  border-bottom: 2px black solid;
+    
+}
+hr {
+  border-color: black;
+  border-style: inset; 
+  border-width: 1px; 
+  margin: 0.5em auto;
+  width: 500px;
+}
+button {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-item-count {
+  font-size: x-small;
+  align-items: center;
+  border-radius: 100%;
+  background-color: #D92121;
+  padding: 5px;
+  color: white;
+  vertical-align: top;
+  margin-left: -10px;
+  margin-top: -15px;
 }
 
 .nav-heading {
@@ -37,7 +65,7 @@ nav > ul {
   display: flex;
   justify-content: center;
   gap: 40px;
-  padding-right: 20px;
+  padding-right: 50px;
 }
 
 nav>ul>li {
@@ -62,6 +90,12 @@ nav>ul>li {
 }
 .pet-card > button {
   cursor: pointer;
+  padding: 10px 40px;
+  color: white;
+  border: none;
+  background-color: black;
+  font-weight: bolder;
+
 }
 .homepage > main {
   position: absolute;
@@ -80,10 +114,7 @@ nav>ul>li {
   row-gap: 20px;
 }
 
-.item-count {
-  font-size: smaller;
-  
-}
+
 .cart {
   display: flex;
   flex-direction: column;
@@ -92,15 +123,46 @@ nav>ul>li {
   gap: 10px;
 }
 
+.cart > button {
+  padding: 10px 40px;
+  color: white;
+  border: none;
+  background-color: #D92121;
+  font-weight: bolder;
+}
+
 .cart-item {
   display: flex;
   justify-self: center;
+  gap: 5px;
+}
+
+.cart-item-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  width: 200px;
+}
+
+.cart-item-name {
+  font-size: 1.25em;
+  font-weight: bolder;
+  padding-top: 5px;
 }
 
 .item-count {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid black;
+  width: 55px;
+  
+}
+
+.item-count , .item-count >button {
+  font-size: 14px;
 }
 
 .item-count > button {
@@ -113,6 +175,8 @@ nav>ul>li {
 .cart-img {
   width: 275px;
   height: 158.3333333333333px;
+  border-radius: 10px;
+  border: 2px solid black;
 }
 .cart-item-section {
   display: flex;
@@ -124,6 +188,9 @@ nav>ul>li {
   justify-content: space-between;
   align-items: center;
   gap: 100px;
+  width: 500px;
+  font-weight: bolder;
+  font-size: 1.25em;
 }
 .pets {
   display: flex;
@@ -135,3 +202,10 @@ nav>ul>li {
 .pets > h1 {
   text-align: center;
 }
+
+.li-cart {
+  display: flex;
+  gap: 0;
+  align-items: center;
+}
+
