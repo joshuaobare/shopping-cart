@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar"
 import Homepage from "./components/Homepage"
 import CartItem from "./components/CartItem"
 import Cart from "./components/Cart"
-import {BrowserRouter as Router , Switch, Route} from "react-router-dom"
+import {BrowserRouter as Router , Routes, Route} from "react-router-dom"
 import Pets from "./components/Pets"
 
 function App() {
@@ -88,28 +88,26 @@ function App() {
 
   },[cart])
 
-  
- 
- 
- 
-
- 
-
-
   return (
     <Router>
       <div className="App">
-      <Navbar items ={itemCount}/>
-      <Cart data = {cart} 
-            addCartCount= {addCartCount} 
-            reduceCartCount = {reduceCartCount}
-            price = {price}
-      />
-      
-      <Pets addToCart={addToCart}/>
-      
-      {/*<Homepage />*/}
-    </div>
+        <Navbar items ={itemCount}/>        
+        <Routes>
+          <Route path = "/" exact element = {<Homepage />} />
+          <Route path = "/cart" element = {
+            <Cart data = {cart} 
+                  addCartCount= {addCartCount} 
+                  reduceCartCount = {reduceCartCount}
+                  price = {price}
+            />}
+          />
+          <Route path = "/pets" element = {<Pets addToCart={addToCart}/>} />
+        </Routes>
+        
+        
+        
+        {/*<Homepage />*/}
+      </div>
     </Router>
     
   );

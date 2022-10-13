@@ -19,8 +19,13 @@ export default function Pets(props) {
        })
     
     return (
-        <div className="card-grid">
-            {cards}
+        <div className="pets">
+            <h1>Pets</h1>
+            <div className="card-grid">
+                {cards}
+            </div>
         </div>
+
+        
     )
 }

@@ -125,3 +125,13 @@ nav>ul>li {
   align-items: center;
   gap: 100px;
 }
+.pets {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.pets > h1 {
+  text-align: center;
+}
