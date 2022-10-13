@@ -1,10 +1,12 @@
 import React , {useState , useEffect} from "react"
 import Card from "./components/Card"
-import data from "./data"
+
 import Navbar from "./components/Navbar"
 import Homepage from "./components/Homepage"
 import CartItem from "./components/CartItem"
 import Cart from "./components/Cart"
+import {BrowserRouter as Router , Switch, Route} from "react-router-dom"
+import Pets from "./components/Pets"
 
 function App() {
 
@@ -87,21 +89,7 @@ function App() {
   },[cart])
 
   
- const cards = data.map(item => {
-  return (
-      <Card
-        key = {item.id} 
-        name = {item.name}
-        type = {item.type}
-        src = {item.src}
-        desc = {item.desc}
-        id = {item.id}
-        inBasket = {item.inBasket}
-        price = {item.price}
-        handleClick = {() => addToCart(item)}
-      />
-      )
- })
+ 
  
  
 
@@ -109,20 +97,21 @@ function App() {
 
 
   return (
-    <div className="App">
+    <Router>
+      <div className="App">
       <Navbar items ={itemCount}/>
       <Cart data = {cart} 
             addCartCount= {addCartCount} 
             reduceCartCount = {reduceCartCount}
             price = {price}
       />
-      {/*<div className="card-grid">
-        {cards}
-  </div>*/}
       
+      <Pets addToCart={addToCart}/>
       
       {/*<Homepage />*/}
     </div>
+    </Router>
+    
   );
 }
 
