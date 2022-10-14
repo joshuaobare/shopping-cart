@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.2a405dc0.css",
+    "main.js": "/shopping-cart/static/js/main.74288635.js",
+    "static/media/BG.jpg": "/shopping-cart/static/media/BG.47d5ed676d67615bff73.jpg",
+    "static/media/GermanShepherd.jpg": "/shopping-cart/static/media/GermanShepherd.8a1d01dbee9d93f65241.jpg",
+    "static/media/TibetanMastiff.jpg": "/shopping-cart/static/media/TibetanMastiff.87811c1d0a95646773ed.jpg",
+    "static/media/ShetlandSheepdog.jpg": "/shopping-cart/static/media/ShetlandSheepdog.e5595d025dd2941d902f.jpg",
+    "static/media/ScottishFold.jpg": "/shopping-cart/static/media/ScottishFold.2441456590d18566a460.jpg",
+    "static/media/SiberianHusky.jpg": "/shopping-cart/static/media/SiberianHusky.ad8aaf1a4db6be51efcd.jpg",
+    "static/media/Doberman.jpg": "/shopping-cart/static/media/Doberman.e729050949414a50e8b6.jpg",
+    "static/media/GoldenRetriever.jpg": "/shopping-cart/static/media/GoldenRetriever.130f2c8fe6a5fa203464.jpg",
+    "static/media/SphynxCat.jpg": "/shopping-cart/static/media/SphynxCat.241a48f606947da0aa95.jpg",
+    "static/media/Birman.jpg": "/shopping-cart/static/media/Birman.7a831d7454e13d5d97cb.jpg",
+    "static/media/SomaliCat.jpg": "/shopping-cart/static/media/SomaliCat.1a85d2c64b1b5062e155.jpg",
+    "static/media/TurkishAngora.jpg": "/shopping-cart/static/media/TurkishAngora.02bafca0f2a74a7446d8.jpg",
+    "static/media/PawPrint.png": "/shopping-cart/static/media/PawPrint.6eb382ac4ece0f52e822.png",
+    "index.html": "/shopping-cart/index.html",
+    "main.2a405dc0.css.map": "/shopping-cart/static/css/main.2a405dc0.css.map",
+    "main.74288635.js.map": "/shopping-cart/static/js/main.74288635.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2a405dc0.css",
+    "static/js/main.74288635.js"
+  ]
+}
