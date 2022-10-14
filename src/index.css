@@ -5,20 +5,22 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f8aebf;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
+.cart > h1 , .pet >h1 {
+  color: white;
+}
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: lightgrey;
+  background-color: #f8aebf;
   
-  border-bottom: 2px black solid;
     
 }
 hr {
@@ -33,7 +35,7 @@ button {
 }
 a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .nav-item-count {
@@ -58,8 +60,11 @@ a {
 .nav-heading > img {
   height: 40px;
   width: 40px;
+  filter: invert(100%);
 }
-
+.nav-heading > h1 {
+  color: white;
+}
 nav > ul {
   list-style-type: none;
   display: flex;
@@ -88,7 +93,7 @@ nav>ul>li {
 .pet-card > img {
   border: 2px black solid;
 }
-.pet-card > button {
+.btn {
   cursor: pointer;
   padding: 10px 40px;
   color: white;
@@ -127,7 +132,7 @@ nav>ul>li {
   padding: 10px 40px;
   color: white;
   border: none;
-  background-color: #D92121;
+  background-color: black;
   font-weight: bolder;
 }
 
@@ -156,20 +161,33 @@ nav>ul>li {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
+  border: 2px solid black;
   width: 55px;
+  color: black;
+  font-weight: bolder;
   
+  
+}
+
+.item-count-num {
+  width: 20px;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  justify-self: center;
+  text-align: center;
 }
 
 .item-count , .item-count >button {
   font-size: 14px;
 }
 
-.item-count > button {
-  background-color: white;
+.item-count > button {  
   outline: none;
   border: none;
   cursor: pointer;
+  background-color: #f8aebf;
+  
+  font-weight: bolder;
 }
 
 .cart-img {
@@ -209,3 +227,11 @@ nav>ul>li {
   align-items: center;
 }
 
+.homepage {
+  background-image: url("./pets/BG.jpg");
+  background-size: "cover";
+  height: 100vh;
+  margin-top: -70px;
+  
+  background-repeat:no-repeat;
+}

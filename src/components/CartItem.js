@@ -7,9 +7,9 @@ export default function CartItem(props) {
                 <div className="cart-item-type">{props.type}</div>
                 <div className="cart-item-price">${props.price}</div>
                 <div className="item-count">
-                    <button onClick={props.reduceCartCount}>-</button>
-                    <div>{props.number}</div>
-                    <button onClick={props.addCartCount}>+</button>
+                    <button className="btn-count" onClick={props.reduceCartCount}>-</button>
+                    <div className="item-count-num">{props.number}</div>
+                    <button className="btn-count" onClick={props.addCartCount}>+</button>
                 </div>
             </div>
         </div>

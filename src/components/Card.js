@@ -4,7 +4,7 @@ export default function Card(props) {
             <h2>{props.name}</h2>
             <img src={props.src} alt={props.type} className="pet-img" />
             <div>${props.price}</div>
-            <button onClick={props.handleClick} >Add To Cart</button>
+            <button onClick={props.handleClick} className="btn" >Add To Cart</button>
         </div>
     )
 }

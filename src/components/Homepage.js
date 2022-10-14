@@ -8,7 +8,7 @@ export default function Homepage() {
                 <h1>Welcome to Pet Store</h1>
                 <div>No Friends? Buy A Friend</div>
                 <Link to = "/pets">
-                    <button>Shop Now</button>
+                    <button className="btn">Shop Now</button>
                 </Link>
                 
             </main>

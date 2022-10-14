@@ -6,7 +6,7 @@ export default function Navbar(props) {
         <nav>
             <div className="nav-heading">
                 <img src={Paw} alt="Pet store logo" />
-                <h1 >Pet Store</h1> 
+                <h1>Pet Store</h1> 
             </div>
             <ul>
                 <Link to = "/">
