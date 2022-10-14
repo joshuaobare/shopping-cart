@@ -2,7 +2,7 @@ import React , {useState , useEffect} from "react"
 import Navbar from "./components/Navbar"
 import Homepage from "./components/Homepage"
 import Cart from "./components/Cart"
-import {BrowserRouter as Router , Routes, Route} from "react-router-dom"
+import {BrowserRouter , Routes, Route} from "react-router-dom"
 import Pets from "./components/Pets"
 
 function App() {
@@ -90,7 +90,7 @@ function App() {
   },[cart])
 
   return (
-    <Router basename="/shopping-cart">
+    <BrowserRouter basename="/">
       <div className="App">
         <Navbar items ={itemCount}/>        
         <Routes>
@@ -111,7 +111,7 @@ function App() {
         </Routes>
         
       </div>
-    </Router>
+    </BrowserRouter>
     
   );
 }
