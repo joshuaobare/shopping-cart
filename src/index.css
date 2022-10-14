@@ -229,7 +229,7 @@ nav>ul>li {
 
 .homepage {
   background-image: url("./pets/BG.jpg");
-  background-size: "cover";
+  background-size: 100%;
   height: 100vh;
   margin-top: -70px;
   
