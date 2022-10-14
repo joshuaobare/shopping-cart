@@ -90,7 +90,7 @@ function App() {
   },[cart])
 
   return (
-    <Router basename="/">
+    <Router basename="/shopping-cart">
       <div className="App">
         <Navbar items ={itemCount}/>        
         <Routes>
