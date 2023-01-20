@@ -2,6 +2,7 @@ import Card from "./Card"
 import data from "../data"
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
+import Sidebar from "./Sidebar"
 
 export default function Pets(props) {
     const [petData , setPetData] = useState([])
@@ -27,6 +28,8 @@ export default function Pets(props) {
     return (
         <div className="pets">
             <h1>Pets</h1>
+            <main>
+            <Sidebar />            
             <div className="card-grid">
                 {petData.map(item => {
                     return (
@@ -44,6 +47,7 @@ export default function Pets(props) {
                         )
        })}
             </div>
+            </main>
         </div>
 
         

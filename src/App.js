@@ -102,14 +102,14 @@ function App() {
                   price = {price}
             />}
           />
-          <Route path = "/pets" element = {
+          <Route path = "/pets" exact element = {
             <Pets 
               addToCart={addToCart}
               cart = {cart}
             />
             } />
 
-          <Route path = "/pets/:breeds" element = {
+          <Route path = "/pets/:species" element = {
             <Pets 
             addToCart={addToCart}
             cart = {cart}

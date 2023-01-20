@@ -23,6 +23,11 @@ nav {
   
     
 }
+
+
+main {
+  display: flex;
+}
 hr {
   border-color: black;
   border-style: inset; 
