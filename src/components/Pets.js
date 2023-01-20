@@ -6,6 +6,7 @@ import Sidebar from "./Sidebar"
 
 export default function Pets(props) {
     const [petData , setPetData] = useState([])
+    const [heading , setHeading] = useState("")
     const {species} = useParams()
     
     useEffect(() => {
@@ -13,21 +14,22 @@ export default function Pets(props) {
 
         if(species === undefined) {
             setPetData(info)
-        } else if(species === "Cat"){
+            setHeading("Pets")
+        } else if(species === "cats"){
             setPetData(() => info.filter(item => item.type === "Cat"))
-        } else if(species === "Dog"){
+            setHeading("Cats")
+        } else if(species === "dogs"){
             setPetData(() => info.filter(item => item.type === "Dog"))
+            setHeading("Dogs")
         }
         
     },[species])
 
 
-
-    console.log(species)
     
     return (
         <div className="pets">
-            <h1>Pets</h1>
+            <h1>{heading}</h1>
             <main>
             <Sidebar />            
             <div className="card-grid">

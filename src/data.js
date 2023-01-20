@@ -54,7 +54,7 @@ const data = [
   },
   {
     name: "Scottish Fold",
-    type: "Dog",
+    type: "Cat",
     src: ScottishFold,
     desc: "",
     id: uniqid(),

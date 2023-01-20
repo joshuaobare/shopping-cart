@@ -27,6 +27,7 @@ nav {
 
 main {
   display: flex;
+  gap: 50px;
 }
 hr {
   border-color: black;
@@ -125,8 +126,9 @@ nav>ul>li {
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(3,1fr);
   row-gap: 20px;
+  column-gap: 40px;
 }
 
 
@@ -244,4 +246,20 @@ nav>ul>li {
   margin-top: -70px;
   
   background-repeat:no-repeat;
+}
+
+.Sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-left: 50px;
+  width: 300px;
+  font-weight: 600;
+  
+}
+
+.sidebar-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
