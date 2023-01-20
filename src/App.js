@@ -108,6 +108,14 @@ function App() {
               cart = {cart}
             />
             } />
+
+          <Route path = "/pets/:breeds" element = {
+            <Pets 
+            addToCart={addToCart}
+            cart = {cart}
+          />
+          }
+          />
         </Routes>
         
       </div>
