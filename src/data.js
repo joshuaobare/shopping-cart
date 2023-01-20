@@ -23,15 +23,16 @@ const data = [
     number: 0
   },
   {
-    name: "Doberman",
+    name: "Tibetan Mastiff",
     type: "Dog",
-    src: Doberman,
+    src: TibetanMastiff,
     desc: "",
     id: uniqid(),
     inBasket: false,
     price: 1500,
     number: 0
   },
+  
   {
     name: "German Shepherd",
     type: "Dog",
@@ -103,15 +104,16 @@ const data = [
     number: 0
   },
   {
-    name: "Tibetan Mastiff",
+    name: "Doberman",
     type: "Dog",
-    src: TibetanMastiff,
+    src: Doberman,
     desc: "",
     id: uniqid(),
     inBasket: false,
     price: 1500,
     number: 0
   },
+  
   {
     name: "Turkish Angora",
     type: "Cat",

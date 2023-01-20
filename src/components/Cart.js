@@ -32,7 +32,7 @@ export default function Cart(props) {
                 <div className="total">TOTAL PRICE </div>
                 <div className="total-price">${props.price}.00</div>
             </div>
-            <button>CHECKOUT (${props.price}.00)</button>
+            <button className="checkout-button">CHECKOUT (${props.price}.00)</button>
             
         </div>
     )

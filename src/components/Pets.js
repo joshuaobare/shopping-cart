@@ -29,26 +29,28 @@ export default function Pets(props) {
     
     return (
         <div className="pets">
-            <h1>{heading}</h1>
-            <main>
-            <Sidebar />            
-            <div className="card-grid">
-                {petData.map(item => {
-                    return (
-                        <Card
-                        key = {item.id} 
-                        name = {item.name}
-                        type = {item.type}
-                        src = {item.src}
-                        desc = {item.desc}
-                        id = {item.id}
-                        inBasket = {item.inBasket}
-                        price = {item.price}
-                        handleClick = {() => props.addToCart(item)}
-                        />
-                        )
-       })}
-            </div>
+            <div>
+            <Sidebar /> 
+            </div>                         
+            <main className="pets-main">
+                <h1 className="pets-main-heading">{heading}</h1>      
+                <div className="card-grid">
+                    {petData.map(item => {
+                        return (
+                            <Card
+                            key = {item.id} 
+                            name = {item.name}
+                            type = {item.type}
+                            src = {item.src}
+                            desc = {item.desc}
+                            id = {item.id}
+                            inBasket = {item.inBasket}
+                            price = {item.price}
+                            handleClick = {() => props.addToCart(item)}
+                            />
+                            )
+                    })}
+                </div>
             </main>
         </div>
 
